@@ -7,7 +7,9 @@ io.on('connection', function(socket) {
     console.log('connect from client.');
     socket.on('disconnect', function() {
         console.log('user disconnect');
-    })
+    });
+
+    socket.broadcast.emit('hi from server.');
 });
 
 app.get('/', function(req, res) {
