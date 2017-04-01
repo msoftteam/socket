@@ -10,6 +10,10 @@ io.on('connection', function(socket) {
     })
 });
 
+app.get('/', function(req, res) {
+    res.send('Hello World');
+});
+
 http.listen(3000, function() {
     console.log('server start at port 3000.');
 });
